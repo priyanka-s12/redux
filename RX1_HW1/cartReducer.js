@@ -15,12 +15,12 @@ const cartReducer = (state = initialState, action) => {
       console.log(existingItem);
 
       if (existingItem >= 0) {
-        const updatedQtyItem = state.cartItems.map((item) =>
+        const updated = state.cartItems.map((item) =>
           item.id === action.payload.id
             ? { ...item, quantity: item.quantity + 1 }
             : item
         );
-        return { ...state, cartItems: updatedQtyItem };
+        return { ...state, cartItems: updated };
       } else {
         return {
           ...state,
