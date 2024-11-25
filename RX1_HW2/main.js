@@ -54,12 +54,14 @@ const removeProfileHandler = () => {
   if (findProfile) {
     store.dispatch(removeProfile(profileId));
     store.dispatch(calculateAverageAge());
-    renderProfiles();
-    updateAverageAge();
-  } else {
-    // avgAge.textContent = 'No profile found.';
-    // avgAge.style.color = 'red';
   }
+  // else {
+  // avgAge.textContent = 'No profile found.';
+  // avgAge.style.color = 'red';
+  // }
+
+  renderProfiles();
+  updateAverageAge();
 };
 addProfileBtn.addEventListener('click', addProfileHandler);
 removeProfileBtn.addEventListener('click', removeProfileHandler);

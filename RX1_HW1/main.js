@@ -30,8 +30,10 @@ window.addToCartHandler = (productId) => {
   //     payload: product,
   //   });
   //   store.dispatch({ type: "cart/calculateTotal" });
-  store.dispatch(addToCart(product));
-  store.dispatch(calculateTotal());
+  if (product) {
+    store.dispatch(addToCart(product));
+    store.dispatch(calculateTotal());
+  }
 };
 
 window.removeFromCartHandler = (productId) => {
