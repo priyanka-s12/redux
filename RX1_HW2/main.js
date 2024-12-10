@@ -43,6 +43,18 @@ const addProfileHandler = (event) => {
     renderProfiles();
     updateAverageAge();
   }
+
+  // const profile = {
+  //   id: Number(profileId.value),
+  //   name: profileName.value,
+  //   age: Number(profileAge.value),
+  // };
+
+  // const { id, name, age } = profile;
+  // if (id && name && age) {
+  //   store.dispatch(addProfile(profile));
+  //   store.dispatch(calculateAverageAge());
+  // }
 };
 
 const removeProfileHandler = () => {
@@ -62,6 +74,10 @@ const removeProfileHandler = () => {
 
   renderProfiles();
   updateAverageAge();
+
+  //  const id = Number(removeProfileId.value);
+  // store.dispatch(removeProfile(id));
+  // store.dispatch(calculateAverageAge());
 };
 addProfileBtn.addEventListener('click', addProfileHandler);
 removeProfileBtn.addEventListener('click', removeProfileHandler);
